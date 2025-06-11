@@ -1,0 +1,67 @@
+body {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sdlc-circle {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #dcd28d 0deg 72deg,
+    #a3d2e2 72deg 144deg,
+    #d0c4e5 144deg 216deg,
+    #e1b7b7 216deg 288deg,
+    #82c89f 288deg 360deg
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-text {
+  position: absolute;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+  width: 180px;
+}
+
+.phase {
+  position: absolute;
+  width: 130px;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+}
+
+.req {
+  top: 20px;
+  left: 180px;
+}
+
+.design {
+  top: 120px;
+  right: 10px;
+}
+
+.implement {
+  bottom: 80px;
+  right: 60px;
+}
+
+.testing {
+  bottom: 60px;
+  left: 60px;
+}
+
+.evolve {
+  top: 120px;
+  left: 10px;
+}

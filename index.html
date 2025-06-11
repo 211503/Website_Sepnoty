@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sepnoty Technologies Pvt Ltd</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script> <!-- Lucide Icons -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .icon {
+      cursor: pointer;
+      color: #1b2e59;
+      width: 24px;
+      height: 24px;
+      transition: color 0.3s;
+    }
+    .icon:hover {
+      color: #ff6600;
+    }
+  </style>
+</head>
+<body>
+  <!-- Chatbot Button -->
+<button id="chatbot-button" title="Chat with us">💬</button>
+
+<!-- Chatbot Box -->
+<div id="chatbot-widget">
+  <div id="chatbot-header">
+    Sepnoty Assistant
+    <span class="close-chat" onclick="toggleChatbot()">×</span>
+  </div>
+  <div id="chatbot-body">
+    <p>Hi! I'm the Sepnoty Assistant. Ask me anything about Sepnoty Technologies Pvt Ltd.</p>
+  </div>
+  <div id="chatbot-input">
+    <input type="text" id="chatbot-message" placeholder="Type your message..." />
+    <button onclick="sendChatMessage()">Send</button>
+  </div>
+</div>
+
+
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="spinner">
+      <div></div><div></div><div></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container">
+      <img src="logo1.png" alt="Sepnoty Logo" width="50" height="40" /> 
+
+      <div class="logo">Sepnoty</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="tepnoty.html">Tepnoty</a></li>
+          <li><a href="club.html">Sepnoty Club</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-icons">
+          <i data-lucide="search" class="icon"></i>
+          <i data-lucide="log-in" class="icon"></i>
+          <i data-lucide="log-out" class="icon"></i>
+          <div class="menu-toggle">☰</div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!--====== OVERLAY START ======-->
+    <div class="sotcox-overlay"></div>
+    <!--====== OVERLAY END ======-->
+
+    <!--====== SEARCH POPUP START ======-->
+    <div class="search-popup">
+        <div class="color-layer"></div>
+        <button class="close-search"><span class="far fa-arrow-up"></span></button>
+        <form method="post" action="blog.html">
+            <div class="form-group">
+                <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+                <button type="submit"><i class="far fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <!--====== SEARCH POPUP END ======-->
+
+
+  <!-- Hero Section -->
+  <section id="home" class="hero" data-aos="fade-up">
+    <div class="container">
+      <h1>Innovating Tomorrow, Today</h1>
+      <p>Technology-driven solutions for a better digital future.</p>
+      <a href="#services" class="btn">Explore Services</a>
+      <a href="https://www.youtube.com/watch?v=_0LizkruGKk" class="btn-outline" target="_blank" rel="noopener">Watch Video</a>
+    </div>
+  </section>
+
+<!--====== ABOUT SECTION START ======-->
+<section id="about" class="about" data-aos="fade-up">
+  <div class="container">
+    <div class="row" style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 40px;">
+      <!-- Left: Heading -->
+      <div class="col-xl-6" style="flex: 1 1 500px;">
+        <div class="section-heading">
+          <span class="sub-heading" style="color: #ff6600; font-weight: 600;">ABOUT US</span>
+          <h2 class="heading" style="font-size: 32px; font-weight: 700; color: #1b2e59;">We provide flexible IT services</h2>
+        </div>
+      </div>
+
+      <!-- Right: Description -->
+      <div class="col-xl-6" style="flex: 1 1 500px;">
+        <p style="font-size: 16px; color: #333;">
+          At Sepnoty Technologies, our team of skilled developers and innovative thinkers transforms complex concepts into intuitive, user-centric digital solutions.
+Whether it’s bespoke software or next-generation mobile applications, we are driven by a passion for engineering excellence and a commitment to technological innovation. </p>
+      </div>
+
+      <!-- Full width: Video -->
+      <div class="col-xl-12" style="margin-top: 60px; text-align: center;">
+      <div class="video-wrapper" style="position: relative; display: inline-block; max-width: 1000px; width: 100%;">
+      <img 
+        src="video3.png" 
+        alt="Sepnoty Office Video" 
+        style="width: 100%; height: 400px; border-radius: 16px; display: block;"
+      />
+      <a 
+        href="https://www.youtube.com/watch?v=_0LizkruGKk" 
+        target="_blank" 
+        class="video-btn" 
+        style="
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: #00bfff;
+          color: #fff;
+          width: 70px;
+          height: 70px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          font-size: 30px;
+          text-decoration: none;
+          box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+          transition: background 0.3s;
+      "
+      onmouseover="this.style.background='#007acc'"
+      onmouseout="this.style.background='#00bfff'"
+    >
+      ▶
+      </a>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--====== ABOUT SECTION END ======-->
+
+
+  <!-- Services Section -->
+  <section id="services" class="about" data-aos="fade-up">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 40px; justify-content: center;">
+        <div style="flex: 1 1 300px; background: #f2f4fa; padding: 20px; border-radius: 10px;" data-aos="zoom-in">
+          <h3>💻 Software Development</h3>
+          <p>Custom web and mobile apps to accelerate your business goals.</p>
+        </div>
+        <div style="flex: 1 1 300px; background: #f2f4fa; padding: 20px; border-radius: 10px;" data-aos="zoom-in" data-aos-delay="100">
+          <h3>🧑‍💻 Web Development</h3>
+          <p>Responsive and SEO-friendly websites to grow your online presence.</p>
+        </div>
+        <div style="flex: 1 1 300px; background: #f2f4fa; padding: 20px; border-radius: 10px;" data-aos="zoom-in" data-aos-delay="200">
+          <h3>📱 App Development</h3>
+          <p>Cross-platform mobile apps with smooth UI and fast performance.</p>
+        </div>
+        <div style="flex: 1 1 300px; background: #f2f4fa; padding: 20px; border-radius: 10px;" data-aos="zoom-in" data-aos-delay="300">
+          <h3>🎨 UI/UX Design</h3>
+          <p>Engaging and intuitive user experiences built for results.</p>
+        </div>
+        <div style="flex: 1 1 300px; background: #f2f4fa; padding: 20px; border-radius: 10px;" data-aos="zoom-in" data-aos-delay="400">
+          <h3>🧑‍💼 BPO Services</h3>
+          <p>Reliable outsourcing solutions for customer support and back-office.</p>
+        </div>
+        <div style="flex: 1 1 300px; background: #f2f4fa; padding: 20px; border-radius: 10px;" data-aos="zoom-in" data-aos-delay="400">
+          <h3>🤖 AI-Powered Solutions</h3>
+          <p>Smart tools built on AI to improve well-being and emotional intelligence.</p>
+        </div>
+        <div style="flex: 1 1 300px; background: #f2f4fa; padding: 20px; border-radius: 10px;" data-aos="zoom-in" data-aos-delay="400">
+          <h3>💡 Digital Product Innovation</h3>
+          <p>We bring your digital ideas to life with strategy and tech expertise.</p>
+        </div>
+        <div style="flex: 1 1 300px; background: #f2f4fa; padding: 20px; border-radius: 10px;" data-aos="zoom-in" data-aos-delay="400">
+          <h3>🧠 AI-Frontend Developer</h3>
+          <p>We craft intelligent, user-centric interfaces by blending AI capabilities with modern frontend technologies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+<!--====== TESTIMONIAL SECTION START ======-->
+    <div class="sotcox-testimonial-section theme-light-bg pt-125 pb-130">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <div class="sotcox-section-heading text-center mb-60">
+                        <span class="sub-heading">testimonials</span>
+                        <h2 class="heading">Client’s success is our success</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="sotcox-testimonial-wrapper owl-carousel sotcox-slide-nav sotcox-slide-nav__style-2" data-testimonial-slider>
+                        <div class="sotcox-testimonial-item">
+                            <div class="thumb">
+                                <img src="Sravs.jpg" alt="">
+                                <span class="quote"><i class="fas fa-quote-left"></i></span>
+                            </div>
+                            <div class="content">
+                                <p>“ Sepnoty’s internship program provided a valuable opportunity to gain hands-on experience. I developed practical skills that go beyond classroom learning. Working on AI-powered mental health apps made the experience even more impactful. ”</p>
+                                <h6 class="title mt-25">Ms. Sravanthi Pollisetti</h6>
+                                
+                            </div>
+                        </div>
+                        <div class="sotcox-testimonial-item">
+                            <div class="thumb">
+                                <img src="Nikki.jpg" alt="">
+                                <span class="quote"><i class="fas fa-quote-left"></i></span>
+                            </div>
+                            <div class="content">
+                                <p>“ Sepnoty gave me the perfect opportunity to work on cutting-edge tech solutions. This experience allowed me to dive deep into innovative projects and sharpen my skills. I also grew significantly in UI/UX design, enhancing both creativity and technical expertise. ” </p>
+                                <h6 class="title mt-25">Ms. Neeharika Kattamuri</h6>
+                                
+                            </div>
+                        </div>
+                        <div class="sotcox-testimonial-item">
+                            <div class="thumb">
+                                <img src="Naga1.jpg" alt="">
+                                <span class="quote"><i class="fas fa-quote-left"></i></span>
+                            </div>
+                            <div class="content">
+                                <p>“ The friendly team and focus on emotional support made my internship at Sepnoty truly special. Their encouragement created a positive and motivating environment every day. It was a rewarding experience I’ll never forget. ”   </p>
+                                <h6 class="title mt-25">Mr. Nageswararao Papineni</h6>
+                                
+                            </div>
+                        </div>
+                        <div class="sotcox-testimonial-item">
+                            <div class="thumb">
+                                <img src="Sridevi.jpg" alt="">
+                                <span class="quote"><i class="fas fa-quote-left"></i></span>
+                            </div>
+                            <div class="content">
+                                <p>“ Great opportunities for interns to grow while working on impactful tech solutions. This company truly believes in mental health and youth-driven innovation — highly recommend!. The work culture at Sepnoty is collaborative and innovation-driven, with supportive leadership that encourages creative problem-solving. ”   </p>
+                                <h6 class="title mt-25">Ms. Thummala Naga Sri Devi</h6>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== TESTIMONIAL SECTION END ======-->
+  <!-- Tepnoty Section with Cards -->
+<section id="tepnoty" class="about" data-aos="fade-up">
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 30px;">Tepnoty</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+      <div style="flex: 1 1 280px; background: #f2f4fa; padding: 20px; border-radius: 10px;">
+        <h4>🚀 Incubation of digital ideas</h4>
+        <img src="img1.png" width="300" height="150">
+        <p>We help seed, grow, and launch future-forward digital products.</p>
+      </div>
+      <div style="flex: 1 1 280px; background: #f2f4fa; padding: 20px; border-radius: 10px;">
+        <h4>🤖 AI and automation research</h4>
+        <img src="img2.png" width="300" height="150">
+        <p>We explore and implement AI solutions that drive efficiency.</p>
+      </div>
+      <div style="flex: 1 1 280px; background: #f2f4fa; padding: 20px; border-radius: 10px;">
+        <h4>📱 Product-based learning & development</h4>
+        <img src="img3.png" width="300" height="150">
+        <p>Training the next-gen through building real products.</p>
+      </div>
+      <div style="flex: 1 1 280px; background: #f2f4fa; padding: 20px; border-radius: 10px;">
+        <h4>🧪 Experiment-driven prototyping</h4>
+        <img src="img4.png" width="300" height="150">
+        <p>Fast, iterative testing of bold concepts and solutions.</p>
+      </div>
+      <div style="flex: 1 1 280px; background: #f2f4fa; padding: 20px; border-radius: 10px;">
+        <h4>🌐 Open-source community building</h4>
+        <img src="img5.png" width="300" height="150">
+        <p>We foster collaboration and knowledge-sharing through open innovation.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Sepnoty Club Pricing Plans -->
+<section id="club" class="pricing-section" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title">Sepnoty Club Plans</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Basic</h3>
+        <p class="price">Free</p>
+        <p>Great for beginners</p>
+        <ul>
+          <li>Access to learning materials</li>
+          <li>Join community channels</li>
+          <li>Participate in workshops</li>
+        </ul>
+        <a href="#" class="btn-signup">Join Now</a>
+      </div>
+
+      <div class="pricing-card highlight">
+        <div class="badge">Most Popular</div>
+        <h3>Pro</h3>
+        <p class="price">₹299/month</p>
+        <p>Perfect for learners & developers</p>
+        <ul>
+          <li>All in Basic</li>
+          <li>Mentor Q&A Access</li>
+          <li>Exclusive Projects</li>
+          <li>Monthly Hackathons</li>
+        </ul>
+        <a href="#" class="btn-signup">Join Now</a>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Team</h3>
+        <p class="price">₹999/month</p>
+        <p>For startups & groups</p>
+        <ul>
+          <li>Everything in Pro</li>
+          <li>Private Team Channel</li>
+          <li>Team Project Guidance</li>
+          <li>Priority Event Access</li>
+        </ul>
+        <a href="#" class="btn-signup">Join Now</a>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Enterprise</h3>
+        <p class="price">Custom</p>
+        <p>For institutions & enterprises</p>
+        <ul>
+          <li>Dedicated Training</li>
+          <li>Custom Curriculum</li>
+          <li>Group Mentorship</li>
+          <li>Reporting & Analytics</li>
+        </ul>
+        <a href="#" class="btn-signup-alt">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.pricing-section {
+  padding: 60px 20px;
+  background: #f9fbfd;
+  text-align: center;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.pricing-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+.pricing-card.highlight {
+  border: 2px solid #3f7afc;
+}
+
+.pricing-card .badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffd700;
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.price {
+  font-size: 24px;
+  color: #1b2e59;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.pricing-card ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.pricing-card ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #3f7afc;
+}
+
+.btn-signup, .btn-signup-alt {
+  background: #3f7afc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.btn-signup:hover, .btn-signup-alt:hover {
+  background: #1f4bb8;
+}
+
+.btn-signup-alt {
+  background: #00bfff;
+}
+</style>
+<style>
+.card-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #1b2e59;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.info-card {
+  flex: 1 1 280px;
+  background: #f2f4fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #1b2e59;
+}
+
+.info-card p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+
+  <!-- ===== Updated Contact + Footer Section (Adjusted) ===== -->
+
+<!-- Contact Cards Section (same structure with correct class names) -->
+<div class="footer-cards">
+  <div class="card">
+    <h4>Free Consultation</h4>
+    <h3>Schedule A Free Consultation With Our Specialist</h3>
+    <a href="contact1.html">Schedule Now</a>
+  </div>
+  <div class="card">
+    <h4>Request</h4>
+    <h3>Begin Your Adventure With Experienced Professionals</h3>
+    <a href="contact1.html">Send Request</a>
+  </div>
+  <div class="card">
+    <h4>Help Desk</h4>
+    <h3>Do You Have Questions Or Want More Information? Call Now.</h3>
+    <span class="phone">+918455807965</span>
+  </div>
+</div>
+
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-bottom">
+    <div class="footer-col">
+      <div class="logo">
+        <img src="logo21.png" alt="Sepnoty Logo" width="170" height="70" /> SEPNOTY TECHNOLOGIES PVT LTD
+      </div>
+      <p class="contact-info">Bengaluru, Karnataka</p>
+      <p class="contact-info">support@sepnoty.in</p>
+      <div class="footer-bottom-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="refund.html">Refund policy</a></li>
+        <li><a href="term.html">Terms & Conditions</a></li>
+        <li><a href="privacy.html">Privacy Policies</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">IT Solutions</a></li>
+        <li><a href="#">Web Development</a></li>
+        <li><a href="#">BPO Services</a></li>
+        <li><a href="#">UI/UX Design</a></li>
+        <li><a href="#">AI-Powered Solutions</a></li>
+        <li><a href="#">Digital Product Innovation</a></li>
+      </ul>
+    </div>
+  </div>
+  <p>Copyright © 2025 Sepnoty Technologies Pvt Ltd, All Rights Reserved.</p>
+  <p><a href="#top">^ Go On Top</a></p>
+</footer>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Sepnoty Technologies Pvt Ltd</title>
+
+  <!-- Fonts and Libraries -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Style -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8fafc;
+      color: #1b2e59;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background: #ffffff;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      color: #1b2e59;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 24px;
+      font-weight: 500;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #1b2e59;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .nav-menu a:hover {
+      background-color: #eaf0ff;
+    }
+
+    .nav-menu a.active {
+      background-color: #1b2e59;
+      color: #fff;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      color: #1b2e59;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .icon:hover {
+      color: #3f7afc;
+    }
+
+    .breadcrumb-area {
+      position: relative;
+      background: linear-gradient(135deg, #111114 0%, #1b2e59 100%);
+      overflow: hidden;
+      padding: 150px 0;
+      text-align: left;
+    }
+
+    .breadcrumb-area::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 216, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(63, 122, 252, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .breadcrumb-area .page-title {
+      font-size: 50px;
+      color: #ffffff;
+      font-weight: 700;
+      position: relative;
+      z-index: 2;
+    }
+
+    .breadcrumb-area .sotcox-breadcrumb ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      position: relative;
+      z-index: 2;
+    }
+
+    .breadcrumb-area .sotcox-breadcrumb ul li {
+      display: inline-block;
+      margin-right: 5px;
+      color: #00d8ff;
+    }
+
+    .breadcrumb-area .right-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 40%;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    /* Enhanced right image with modern tech visual */
+    .right-img-content {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      background: linear-gradient(45deg, rgba(0, 216, 255, 0.1), rgba(63, 122, 252, 0.1));
+      clip-path: ellipse(60% 100% at 100% 50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .tech-visual {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .central-icon {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #00d8ff, #3f7afc);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      z-index: 10;
+      box-shadow: 0 0 30px rgba(0, 216, 255, 0.5);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .orbit-ring {
+      position: absolute;
+      border: 2px solid rgba(0, 216, 255, 0.3);
+      border-radius: 50%;
+      animation: rotate 20s linear infinite;
+    }
+
+    .ring-1 {
+      width: 200px;
+      height: 200px;
+      animation-duration: 15s;
+    }
+
+    .ring-2 {
+      width: 250px;
+      height: 250px;
+      animation-duration: 25s;
+      animation-direction: reverse;
+    }
+
+    .ring-3 {
+      width: 300px;
+      height: 300px;
+      animation-duration: 35s;
+    }
+
+    .orbit-dot {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: #00d8ff;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 216, 255, 0.8);
+    }
+
+    .dot-1 { top: -4px; left: 50%; transform: translateX(-50%); }
+    .dot-2 { bottom: -4px; left: 50%; transform: translateX(-50%); }
+    .dot-3 { top: 50%; right: -4px; transform: translateY(-50%); }
+    .dot-4 { top: 50%; left: -4px; transform: translateY(-50%); }
+
+    .floating-elements {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .floating-element {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: rgba(0, 216, 255, 0.6);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .float-1 { top: 20%; left: 30%; animation-delay: 0s; }
+    .float-2 { top: 60%; left: 20%; animation-delay: 2s; }
+    .float-3 { top: 40%; left: 60%; animation-delay: 4s; }
+    .float-4 { top: 80%; left: 50%; animation-delay: 1s; }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 30px rgba(0, 216, 255, 0.5); }
+      50% { transform: scale(1.1); box-shadow: 0 0 40px rgba(0, 216, 255, 0.8); }
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) opacity(0.6); }
+      50% { transform: translateY(-20px) opacity(1); }
+    }
+
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 20px;
+    }
+
+    .about-text {
+      max-width: 500px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+      padding: 30px;
+    }
+
+    .about-text h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .about-text span {
+      color: #3f7afc;
+      font-weight: 600;
+    }
+
+    .about-text p {
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .about-img img {
+      max-width: 480px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .video-wrapper img {
+      border-radius: 16px;
+    }
+
+    .video-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #00bfff;
+      color: #fff;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      transition: background 0.3s;
+    }
+
+    .video-btn:hover {
+      background: #007acc;
+    }
+
+    footer {
+      background: #1b2e59;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .footer-cards {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      background: #f2f4fa;
+      padding: 40px 20px;
+    }
+
+    .footer-cards .card {
+      flex: 1 1 300px;
+      background: #fff;
+      margin: 10px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .footer-bottom ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-bottom a {
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      margin: 5px 0;
+    }
+
+    .footer-bottom-social a {
+      margin: 0 5px;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .breadcrumb-area .right-img {
+        width: 50%;
+      }
+      
+      .tech-visual {
+        width: 200px;
+        height: 200px;
+      }
+      
+      .central-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+      }
+      
+      .ring-1 { width: 150px; height: 150px; }
+      .ring-2 { width: 180px; height: 180px; }
+      .ring-3 { width: 200px; height: 200px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container">
+      <div class="nav-left">
+        <img src="logo1.png" alt="Sepnoty Logo" width="40" height="35" />
+        <span class="logo-text"><strong>Sepnoty</strong></span>
+      </div>
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="tepnoty.html">Tepnoty</a>
+        <a href="sepnoty.html">Sepnoty Club</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-icons">
+        <i data-lucide="search" class="icon"></i>
+        <i data-lucide="log-in" class="icon"></i>
+        <i data-lucide="log-out" class="icon"></i>
+      </div>
+    </div>
+  </header>
+
+  <!--====== BREADCRUMB SECTION START ======-->
+    <section class="breadcrumb-area fix theme-dark-bg  bg_img">
+        <div class="small-shape small-shape__1"><img src="small-shape-5.png" alt=""></div>
+        <div class="small-shape small-shape__2"><img src="small-shape-6.png" alt=""></div>
+        <div class="small-shape small-shape__3"><img src="small-shape-2.png" alt=""></div>
+        <div class="small-shape small-shape__4"><img src="shapes/small-shape-8.png" alt=""></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="sotcox-breadcrumb-wrapper position-relative pt-190 pb-190">
+                        <h2 class="page-title">About </h2>
+                        <div class="sotcox-breadcrumb breadcrumbs">
+                            <ul class="list-unstyled d-flex align-items-center">
+                                <li class="sotcox-item duxinbcrumb-begin">
+                                    <a href="index.html"><span>Home Page</span></a>
+                                </li>
+                                <li class="sotcox-item duxinbcrumb-end">
+                                    <span>About us</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right-img">
+                            <div class="right-img-content">
+                                <div class="tech-visual">
+                                    <div class="central-icon">
+                                        💼
+                                    </div>
+                                    <div class="orbit-ring ring-1">
+                                        <div class="orbit-dot dot-1"></div>
+                                        <div class="orbit-dot dot-3"></div>
+                                    </div>
+                                    <div class="orbit-ring ring-2">
+                                        <div class="orbit-dot dot-2"></div>
+                                        <div class="orbit-dot dot-4"></div>
+                                    </div>
+                                    <div class="orbit-ring ring-3">
+                                        <div class="orbit-dot dot-1"></div>
+                                        <div class="orbit-dot dot-2"></div>
+                                        <div class="orbit-dot dot-3"></div>
+                                        <div class="orbit-dot dot-4"></div>
+                                    </div>
+                                </div>
+                                <div class="floating-elements">
+                                    <div class="floating-element float-1"></div>
+                                    <div class="floating-element float-2"></div>
+                                    <div class="floating-element float-3"></div>
+                                    <div class="floating-element float-4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== BREADCRUMB SECTION END ======-->
+
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-text">
+      <h2>We're here to <span>empower innovation</span></h2>
+      <p>
+        Sepnoty Technologies Pvt Ltd is driven by a passion for delivering high-quality software, AI-driven applications, and enterprise-grade IT services.
+        <br><br>
+        Our mission is to bridge the gap between business goals and technology by crafting solutions that are not only effective but also sustainable and scalable.
+        <br><br>
+        We believe technology should work for people—not the other way around.
+      </p>
+    </div>
+    <div class="about-img">
+      <img src="aboutmeet.png" alt="Sepnoty Team Photo" />
+    </div>
+  </section>
+
+  <!-- Contact Cards -->
+  <div class="footer-cards">
+    <div class="card">
+      <h4>Free Consultation</h4>
+      <h3>Schedule A Free Consultation With Our Specialist</h3>
+      <a href="contact1.html">Schedule Now</a>
+    </div>
+    <div class="card">
+      <h4>Request</h4>
+      <h3>Begin Your Adventure With Experienced Professionals</h3>
+      <a href="contact1.html">Send Request</a>
+    </div>
+    <div class="card">
+      <h4>Help Desk</h4>
+      <h3>Do You Have Questions Or Want More Information? Call Now.</h3>
+      <span class="phone">+918455807965</span>
+    </div>
+  </div>
+  
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-bottom">
+      <div class="footer-col">
+        <div class="logo">
+          <img src="logo21.png" alt="Sepnoty Logo" width="170" height="70" />
+          <p>SEPNOTY TECHNOLOGIES PVT LTD</p>
+        </div>
+        <p>Bengaluru, Karnataka</p>
+        <p>support@sepnoty.in</p>
+        <div class="footer-bottom-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="refund.html">Refund policy</a></li>
+          <li><a href="term.html">Terms & Conditions</a></li>
+          <li><a href="privacy.html">Privacy Policies</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">IT Solutions</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">BPO Services</a></li>
+          <li><a href="#">UI/UX Design</a></li>
+          <li><a href="#">AI-Powered Solutions</a></li>
+          <li><a href="#">Digital Product Innovation</a></li>
+        </ul>
+      </div>
+    </div>
+    <p>Copyright © 2025 Sepnoty Technologies Pvt Ltd, All Rights Reserved.</p>
+    <p><a href="#top">^ Go On Top</a></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
